@@ -18,16 +18,6 @@ final class DetailView: UIView {
         return imageView
     }()
 
-    private let textLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
     private let roundedCornerView: RoundedCornerTextView = {
         let view = RoundedCornerTextView()
         view.translatesAutoresizingMaskIntoConstraints = false

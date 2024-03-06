@@ -16,6 +16,7 @@ class RoundedCornerTextView: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.accessibilityIdentifier = "textLabel"
         return label
     }()
 

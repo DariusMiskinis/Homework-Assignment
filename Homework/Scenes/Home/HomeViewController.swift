@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum TypeOfInformation {
-    case dadJoke
-    case chuckNorrisFact
-}
-
 protocol HomeViewControllable: AnyObject {
     func handleError(_ error: String)
     func showDetails(_ detailsViewModel: DetailViewModel)
@@ -21,7 +16,7 @@ class HomeViewController: UIViewController {
 
     var interactor: HomeInteractable?
 
-    private let contentView = MainView()
+    private let contentView = HomeView()
 
     override func viewDidLoad() {
         super.viewDidLoad()

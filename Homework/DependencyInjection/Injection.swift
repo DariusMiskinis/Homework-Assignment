@@ -14,13 +14,16 @@ final class Injection {
     private let container: Container = Container()
 
     init() {
-        registerDependencies()
+        if ProcessInfo.processInfo.arguments.contains("--MockNetworkResponses") {
+            registerMockedServices()
+            registerDependencies()
+        } else {
+            registerRealServices()
+            registerDependencies()
+        }
     }
-    
-    private func registerDependencies() {
-        container.register(NetworkManagable.self) { _ in NetworkManager() }
-            .inObjectScope(.container)
 
+    private func registerRealServices() {
         container.register(DadJokesProvidable.self) { resolver in
             let networkManager = resolver.resolve(NetworkManagable.self)!
             return DadJokesService(networkManager: networkManager)
@@ -30,12 +33,25 @@ final class Injection {
             let networkManager = resolver.resolve(NetworkManagable.self)!
             return ChuckNorrisFactsService(networkManager: networkManager)
         }
+    }
+
+    private func registerMockedServices() {
+        container.register(DadJokesProvidable.self) { resolver in
+            return MockedDadJokesService()
+        }
+
+        container.register(ChuckNorrisFactsProvidable.self) { resolver in
+            return MockedChuckNorrisFactsService()
+        }
+    }
+
+    private func registerDependencies() {
+        container.register(NetworkManagable.self) { _ in NetworkManager() }
+            .inObjectScope(.container)
 
         container.register(HomePresentable.self) { resolver in
             let presenter = HomePresenter()
-
             presenter.controller = resolver.resolve(HomeViewControllable.self)!
-
             return presenter
         }
 
@@ -48,7 +64,6 @@ final class Injection {
 
             return interactor
         }
-
 
         container.register(HomeViewControllable.self) { _ in HomeViewController() }
             .initCompleted { resolver, child in

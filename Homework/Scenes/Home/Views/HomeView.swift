@@ -13,7 +13,7 @@ protocol MainViewDelegate: AnyObject{
     func didTapChuckNorrisFactButton()
 }
 
-class MainView: UIView {
+class HomeView: UIView {
 
     weak var delegate: MainViewDelegate?
 
@@ -52,8 +52,8 @@ class MainView: UIView {
         button.backgroundColor = .buttonBackground
         button.setTitleColor(.buttonText, for: .normal)
         button.layer.cornerRadius = 20
+        button.accessibilityIdentifier = "dadJokeButton"
         button.addTarget(self, action: #selector(getDadJokeTapped), for: .touchUpInside)
-
         return button
     }()
 
@@ -64,6 +64,7 @@ class MainView: UIView {
         button.backgroundColor = .buttonBackground
         button.setTitleColor(.buttonText, for: .normal)
         button.layer.cornerRadius = 20
+        button.accessibilityIdentifier = "chuckNorrisFactButton"
         button.addTarget(self, action: #selector(getChuckNorrisFactTapped), for: .touchUpInside)
         return button
     }()

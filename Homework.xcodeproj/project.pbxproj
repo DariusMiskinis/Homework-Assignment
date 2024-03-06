@@ -13,10 +13,9 @@
 		A301BF6A2B9366AE008EE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A301BF682B9366AE008EE453 /* LaunchScreen.storyboard */; };
 		A301BF752B9366AE008EE453 /* HomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301BF742B9366AE008EE453 /* HomeworkTests.swift */; };
 		A301BF7F2B9366AE008EE453 /* HomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301BF7E2B9366AE008EE453 /* HomeworkUITests.swift */; };
-		A301BF812B9366AE008EE453 /* HomeworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301BF802B9366AE008EE453 /* HomeworkUITestsLaunchTests.swift */; };
 		A36E234E2B9375010060F24D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E234D2B9375010060F24D /* NetworkManager.swift */; };
 		A36E23502B9375440060F24D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E234F2B9375440060F24D /* NetworkError.swift */; };
-		A36E237D2B93821F0060F24D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E237C2B93821F0060F24D /* MainView.swift */; };
+		A36E237D2B93821F0060F24D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E237C2B93821F0060F24D /* HomeView.swift */; };
 		A36E23812B938A440060F24D /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E23802B938A440060F24D /* UIColor+Theme.swift */; };
 		A36E23842B94AA880060F24D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E23832B94AA880060F24D /* DetailViewController.swift */; };
 		A36E238C2B9660EE0060F24D /* RoundedCornerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36E238B2B9660EE0060F24D /* RoundedCornerTextView.swift */; };
@@ -33,6 +32,9 @@
 		A3837E942B97CDFD00D65F5B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837E932B97CDFD00D65F5B /* HomePresenter.swift */; };
 		A3837E972B9836E300D65F5B /* InterestingInformationProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837E962B9836E300D65F5B /* InterestingInformationProvidable.swift */; };
 		A3837E9B2B988A6300D65F5B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837E9A2B988A6300D65F5B /* DetailViewModel.swift */; };
+		A3837E9E2B98FF0D00D65F5B /* MockedDadJokesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837E9D2B98FF0D00D65F5B /* MockedDadJokesService.swift */; };
+		A3837EA02B98FF9D00D65F5B /* MockedChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837E9F2B98FF9D00D65F5B /* MockedChuckNorrisFactsService.swift */; };
+		A3837EA22B99090500D65F5B /* TypeOfInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3837EA12B99090500D65F5B /* TypeOfInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +65,9 @@
 		A301BF742B9366AE008EE453 /* HomeworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTests.swift; sourceTree = "<group>"; };
 		A301BF7A2B9366AE008EE453 /* HomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A301BF7E2B9366AE008EE453 /* HomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkUITests.swift; sourceTree = "<group>"; };
-		A301BF802B9366AE008EE453 /* HomeworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A36E234D2B9375010060F24D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A36E234F2B9375440060F24D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		A36E237C2B93821F0060F24D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A36E237C2B93821F0060F24D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A36E23802B938A440060F24D /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		A36E23832B94AA880060F24D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A36E238B2B9660EE0060F24D /* RoundedCornerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerTextView.swift; sourceTree = "<group>"; };
@@ -82,6 +83,9 @@
 		A3837E932B97CDFD00D65F5B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		A3837E962B9836E300D65F5B /* InterestingInformationProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestingInformationProvidable.swift; sourceTree = "<group>"; };
 		A3837E9A2B988A6300D65F5B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A3837E9D2B98FF0D00D65F5B /* MockedDadJokesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedDadJokesService.swift; sourceTree = "<group>"; };
+		A3837E9F2B98FF9D00D65F5B /* MockedChuckNorrisFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedChuckNorrisFactsService.swift; sourceTree = "<group>"; };
+		A3837EA12B99090500D65F5B /* TypeOfInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				A301BF7E2B9366AE008EE453 /* HomeworkUITests.swift */,
-				A301BF802B9366AE008EE453 /* HomeworkUITestsLaunchTests.swift */,
 			);
 			path = HomeworkUITests;
 			sourceTree = "<group>";
@@ -175,21 +178,22 @@
 		A36E23512B9376910060F24D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A36E23522B93769C0060F24D /* Home */,
 				A36E23822B94AA6F0060F24D /* Detail */,
-				A36E23522B93769C0060F24D /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		A36E23522B93769C0060F24D /* Main */ = {
+		A36E23522B93769C0060F24D /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				A3837E8F2B97CC5500D65F5B /* HomeViewController.swift */,
 				A3837E912B97CD3500D65F5B /* HomeInteractor.swift */,
 				A3837E932B97CDFD00D65F5B /* HomePresenter.swift */,
+				A3837EA12B99090500D65F5B /* TypeOfInformation.swift */,
 				A3837E992B98431900D65F5B /* Views */,
 			);
-			path = Main;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A36E237F2B938A2B0060F24D /* Theme */ = {
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				A36E23972B9772EB0060F24D /* DadJokesService.swift */,
+				A3837E9D2B98FF0D00D65F5B /* MockedDadJokesService.swift */,
 				A36E23A02B9797BB0060F24D /* Response */,
 			);
 			path = DadJokes;
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				A36E23992B9772FD0060F24D /* ChuckNorrisFactsService.swift */,
+				A3837E9F2B98FF9D00D65F5B /* MockedChuckNorrisFactsService.swift */,
 				A36E239D2B9796F00060F24D /* Response */,
 			);
 			path = ChuckNorris;
@@ -291,7 +297,7 @@
 		A3837E992B98431900D65F5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A36E237C2B93821F0060F24D /* MainView.swift */,
+				A36E237C2B93821F0060F24D /* HomeView.swift */,
 				A36E238D2B96615F0060F24D /* RoundedCornerView.swift */,
 			);
 			path = Views;
@@ -434,11 +440,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A36E239F2B9797160060F24D /* ChuckNorrisFactResponse.swift in Sources */,
-				A36E237D2B93821F0060F24D /* MainView.swift in Sources */,
+				A36E237D2B93821F0060F24D /* HomeView.swift in Sources */,
 				A3837E902B97CC5500D65F5B /* HomeViewController.swift in Sources */,
 				A3837E9B2B988A6300D65F5B /* DetailViewModel.swift in Sources */,
 				A36E234E2B9375010060F24D /* NetworkManager.swift in Sources */,
 				A36E23812B938A440060F24D /* UIColor+Theme.swift in Sources */,
+				A3837E9E2B98FF0D00D65F5B /* MockedDadJokesService.swift in Sources */,
 				A3837E922B97CD3500D65F5B /* HomeInteractor.swift in Sources */,
 				A36E23982B9772EB0060F24D /* DadJokesService.swift in Sources */,
 				A36E238E2B96615F0060F24D /* RoundedCornerView.swift in Sources */,
@@ -448,10 +455,12 @@
 				A36E23842B94AA880060F24D /* DetailViewController.swift in Sources */,
 				A36E23502B9375440060F24D /* NetworkError.swift in Sources */,
 				A36E23AB2B97BCA80060F24D /* DetailView.swift in Sources */,
+				A3837EA02B98FF9D00D65F5B /* MockedChuckNorrisFactsService.swift in Sources */,
 				A36E239A2B9772FD0060F24D /* ChuckNorrisFactsService.swift in Sources */,
 				A3837E942B97CDFD00D65F5B /* HomePresenter.swift in Sources */,
 				A36E23A72B979FE10060F24D /* Injection.swift in Sources */,
 				A3837E972B9836E300D65F5B /* InterestingInformationProvidable.swift in Sources */,
+				A3837EA22B99090500D65F5B /* TypeOfInformation.swift in Sources */,
 				A36E238C2B9660EE0060F24D /* RoundedCornerTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A301BF812B9366AE008EE453 /* HomeworkUITestsLaunchTests.swift in Sources */,
 				A301BF7F2B9366AE008EE453 /* HomeworkUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
