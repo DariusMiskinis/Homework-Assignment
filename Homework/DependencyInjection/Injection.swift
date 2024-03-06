@@ -40,10 +40,10 @@ final class Injection {
         }
 
         container.register(HomeInteractable.self) { resolver in
-            let interactor = HomeInteractor()
+            let dadJokesService = resolver.resolve(DadJokesProvidable.self)!
+            let chuckNorrisFactsService = resolver.resolve(ChuckNorrisFactsProvidable.self)!
 
-            interactor.dadJokesService = resolver.resolve(DadJokesProvidable.self)!
-            interactor.chuckNorrisFactsService = resolver.resolve(ChuckNorrisFactsProvidable.self)!
+            let interactor = HomeInteractor(dadJokesService: dadJokesService, chuckNorrisFactsService: chuckNorrisFactsService)
             interactor.presenter = resolver.resolve(HomePresentable.self)!
 
             return interactor
@@ -51,9 +51,9 @@ final class Injection {
 
 
         container.register(HomeViewControllable.self) { _ in HomeViewController() }
-            .initCompleted { r, c in
-                let child = c as! HomeViewController
-                child.interactor = r.resolve(HomeInteractable.self)
+            .initCompleted { resolver, child in
+                let homeViewController = child as! HomeViewController
+                homeViewController.interactor = resolver.resolve(HomeInteractable.self)
             }
     }
 

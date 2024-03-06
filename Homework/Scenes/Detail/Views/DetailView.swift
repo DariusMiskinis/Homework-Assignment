@@ -28,7 +28,7 @@ final class DetailView: UIView {
         return label
     }()
 
-    let roundedCornerView: RoundedCornerTextView = {
+    private let roundedCornerView: RoundedCornerTextView = {
         let view = RoundedCornerTextView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

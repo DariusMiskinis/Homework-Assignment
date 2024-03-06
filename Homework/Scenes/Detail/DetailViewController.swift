@@ -8,12 +8,6 @@
 import Foundation
 import UIKit
 
-
-struct DetailViewModel {
-    let text: String
-    let image: UIImage
-}
-
 final class DetailViewController: UIViewController {
 
     private let detailView = DetailView()

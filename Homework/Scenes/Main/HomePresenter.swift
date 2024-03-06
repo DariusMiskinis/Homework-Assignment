@@ -13,7 +13,7 @@ protocol HomePresentable {
 }
 
 final class HomePresenter {
-    weak var controller: HomeViewControllable!
+    weak var controller: HomeViewControllable?
 }
 
 extension HomePresenter: HomePresentable {
@@ -30,7 +30,7 @@ extension HomePresenter: HomePresentable {
         }
 
         let viewModel = DetailViewModel(text: text, image: image)
-        controller.showDetails(viewModel)
+        controller?.showDetails(viewModel)
     }
 
     @MainActor
@@ -44,7 +44,7 @@ extension HomePresenter: HomePresentable {
             errorText = "Error fetching Chuck Norris fact: \(error)"
         }
         
-        controller.handleError(errorText)
+        controller?.handleError(errorText)
     }
 
 }

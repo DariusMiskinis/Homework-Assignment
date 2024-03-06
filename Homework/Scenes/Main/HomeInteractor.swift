@@ -11,9 +11,16 @@ protocol HomeInteractable {
 }
 
 final class HomeInteractor {
-    var presenter: HomePresentable!
-    var dadJokesService: DadJokesProvidable!
-    var chuckNorrisFactsService: ChuckNorrisFactsProvidable!
+    var presenter: HomePresentable?
+
+    private let dadJokesService: DadJokesProvidable
+    private let chuckNorrisFactsService: ChuckNorrisFactsProvidable
+
+    init(dadJokesService: DadJokesProvidable, chuckNorrisFactsService: ChuckNorrisFactsProvidable) {
+        self.dadJokesService = dadJokesService
+        self.chuckNorrisFactsService = chuckNorrisFactsService
+    }
+
 }
 
 extension HomeInteractor: HomeInteractable {
@@ -22,9 +29,9 @@ extension HomeInteractor: HomeInteractable {
         Task { @MainActor in
             do {
                 let joke = try await dadJokesService.getDadJoke()
-                presenter.presentDetails(text: joke.interestingText, typeOfInformation: .dadJoke)
+                presenter?.presentDetails(text: joke.interestingText, typeOfInformation: .dadJoke)
             } catch {
-                presenter.showError(error: error, typeOfInformation: .dadJoke)
+                presenter?.showError(error: error, typeOfInformation: .dadJoke)
             }
         }
     }
@@ -33,9 +40,9 @@ extension HomeInteractor: HomeInteractable {
         Task { @MainActor in
             do {
                 let fact = try await chuckNorrisFactsService.getChuckNorrisFact()
-                presenter.presentDetails(text: fact.interestingText, typeOfInformation: .chuckNorrisFact)
+                presenter?.presentDetails(text: fact.interestingText, typeOfInformation: .chuckNorrisFact)
             } catch {
-                presenter.showError(error: error, typeOfInformation: .chuckNorrisFact)
+                presenter?.showError(error: error, typeOfInformation: .chuckNorrisFact)
             }
         }
     }
